@@ -14,15 +14,18 @@ Finally, it generates into 2 Excel sheet:
 * Easily configurable - Add more categories under `SECTION_MAP`
 * Cleans input text with multiple methods to ensure output are easily readable
 * Assigns unique names to "NEW CHECK" category for manual review if unknown category
+
 ## Requirements
 * Python 3.x
 * [`pandas` library](https://pandas.pydata.org/)
 * [`python-docx` library](https://python-docx.readthedocs.io)
+* [`openpyxl` library](https://pypi.org/project/openpyxl/))
+
 ## Usage
 1.  Download repo as a zip file and extract
 3. **Install Libraries:**
     ```bash
-    pip install pandas python-docx
+    pip install pandas python-docx openpyxl
     ```
 2.  Place all the `.docx` files you want to process inside the `input_docs` folder. Script assumes filename (without extension). Example `BLACKOPS.docx` -> UNIT 'BLACKOPS'
 3. **Run the Script:**
@@ -38,6 +41,7 @@ Finally, it generates into 2 Excel sheet:
 5.  **Customization (Optional):**
     * Modify the `INPUT_FOLDER`, `OUTPUT_FILE`, `OUTPUT_SORTED_FILE`, and `NEW_CATEGORY_LABEL` constants if needed.
     * Edit the `SECTION_MAP` dictionary within the script to add, remove, or modify header keywords and their corresponding category mappings. Remember that the order matters for the matching logic – place more specific keywords before more general ones.
+
 ## Limitations
 * **Multi-line Entries:** The script processes documents paragraph by paragraph. Personnel names or other data split across multiple lines might not be parsed correctly.
 * **Complex Layouts:** Does not handle data within tables, text boxes, or complex document structures other than standard paragraphs.
