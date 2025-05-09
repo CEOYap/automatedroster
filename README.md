@@ -8,6 +8,7 @@ It is designed to handle variations in document formatting, including different 
 Finally, it generates into 2 Excel sheet:
 1.  `Output_1.xlsx`: Contains all extracted unique names with their assigned category, unit category (derived from the filename), and a sequential number (`BIL`) across the entire dataset.
 2.  `Output_sorted.xlsx`: Contains the same personnel data, but sorted alphabetically by category, with a sequential count (`COUNT`) restarting for each category.
+
 ## Key Features
 * Processes multiple docx - Simply add them to `input_docs` folder .
 * Fast and accurate - Uses two method `startwith`  and check for keywords
@@ -19,7 +20,7 @@ Finally, it generates into 2 Excel sheet:
 * Python 3.x
 * [`pandas` library](https://pandas.pydata.org/)
 * [`python-docx` library](https://python-docx.readthedocs.io)
-* [`openpyxl` library](https://pypi.org/project/openpyxl/))
+* [`openpyxl` library](https://pypi.org/project/openpyxl/)
 
 ## Usage
 1.  Download repo as a zip file and extract
@@ -46,5 +47,6 @@ Finally, it generates into 2 Excel sheet:
 * **Multi-line Entries:** The script processes documents paragraph by paragraph. Personnel names or other data split across multiple lines might not be parsed correctly.
 * **Complex Layouts:** Does not handle data within tables, text boxes, or complex document structures other than standard paragraphs.
 * **Header Ambiguity:** Relies heavily on the keywords and order defined in `SECTION_MAP`. Ambiguous headers or very short keywords might occasionally lead to miscategorisation, although the matching logic attempts to mitigate this. Entries under `NEW CHECK` require manual verification.
+
 ## License
 Released under the [MIT License](https://opensource.org/licenses/MIT).
